@@ -118,6 +118,3 @@ def createLoggerForScreenAndFile(file_name, s_format=None):
     logger.addHandler(ch)
 
     return logger
-    # logger.debug('This is a test log message.')
-
-

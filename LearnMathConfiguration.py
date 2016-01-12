@@ -55,8 +55,6 @@ class LearnMathConfiguration(object):
 
     @staticmethod
     def saveConfigurationToFile(game_configuration):
-        # print(os.getcwd())
-
         config = ConfigParser()
         config.add_section('main')
         config.set('main', LearnMathConfiguration.DEFAULT_EQUATION_NUMBER_KEY,

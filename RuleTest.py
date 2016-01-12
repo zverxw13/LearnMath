@@ -219,10 +219,3 @@ class ValidateRules_W(unittest.TestCase):
         rules = Rule.parse(txt_rule)
 
         Equation.validate_rules_for_W(rules)
-
-
-#     def test_odejmowanie_wynik_ujemny(self):
-#         L1>0
-# L1<11
-# L2>20
-# L2<30

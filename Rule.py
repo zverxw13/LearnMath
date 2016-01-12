@@ -95,13 +95,13 @@ class Rule(object):
         if len(str_value) <= 0:
             raise RuleParsingSingleLineException("Invalid rule: " + str_one_rule + "\n" + "Missing value.")
         if not str_value.isdigit():
-            raise RuleParsingSingleLineException("Invalid rule: " + str_one_rule + "\n" + "Invalid value (should be "
-                                                                                          "integer)")
+            raise RuleParsingSingleLineException("Invalid rule: " + str_one_rule + "\n" +
+                                                 "Invalid value (should be integer)")
         try:
             value = int(str_value)
         except Exception as exc:
-            raise RuleParsingSingleLineException("Invalid rule: " + str_one_rule + "\n" + "Invalid value (should be "
-                                                                                          "integer.")
+            raise RuleParsingSingleLineException("Invalid rule: " + str_one_rule +
+                                                 "\n" + "Invalid value (should be integer.")
 
         # prepare returning tuple
         ret_tuple = (element, operand, value)

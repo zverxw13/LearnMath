@@ -1,6 +1,7 @@
 import unittest
 from Game import *
 
+
 class GeneralTests(unittest.TestCase):
 
     def test_randint_first_gt_second(self):
@@ -288,4 +289,3 @@ class MultiplyingTest(unittest.TestCase):
         self.assertTrue(eq.checkUserResult(n1*n2), eq.__str__() + " should be " + str(n1*n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "8 * 6 = 6 + 6 + 6 + 6 + 6 + 6 + 6 + 6 = ")
-

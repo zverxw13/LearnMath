@@ -823,16 +823,5 @@ class Equation(object):
         Return True if userResult is correct answer, False otherwise.
         """
         self.user_answer = userResult
-        correctResult = 0
-        # if self.operator == OPERATION_ADDITION:
-        #     correctResult = self.number_1 + self.number_2
-        # elif self.operator == OPERATION_SUBTRACTION:
-        #     correctResult = self.number_1 - self.number_2
-        # elif self.operator == OPERATION_MULTIPLY:
-        #     correctResult = self.number_1 * self.number_2
-        # elif self.operator == OPERATION_DIVISION:
-        #     correctResult = self.number_1 / self.number_2
-
         correctResult2 = eval(str(self.number_1) + self.operator + str(self.number_2))
-
         return correctResult2 == userResult
