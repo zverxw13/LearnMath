@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowMatematykaNa5</class>
+ <widget class="QMainWindow" name="MainWindowMatematykaNa5">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1147</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Matematyka na 5!</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout_main">
+      <item row="3" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_controls">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_left">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_hint">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>36</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>  Podpowiedź  </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_center">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_check">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>36</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>  Sprawdź  </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_right">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0" rowspan="5">
+       <widget class="QLabel" name="label_growing_image">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>48</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+        </property>
+        <property name="margin">
+         <number>5</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_comment">
+        <item>
+         <widget class="QLabel" name="label_comment">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>36</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Brawo!</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_equation">
+        <property name="spacing">
+         <number>30</number>
+        </property>
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_number_1">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>68</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>123</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_operation">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>68</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_number_2">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>68</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>234</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_equals">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>68</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string> = </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_result">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>68</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:68pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:72pt;&quot;&gt;3570&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="4" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_score">
+        <property name="topMargin">
+         <number>20</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_score">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>28</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Działanie: 10 z 10            Poprawnie: 10           Błędnie: 0   
+
+  Świetny wynik, gratulacje!</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_description">
+        <item>
+         <widget class="QLabel" name="label_description">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>22</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Wpisz wynik działania:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1147</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGra">
+    <property name="title">
+     <string>Gra</string>
+    </property>
+    <widget class="QMenu" name="menuTylko_dodawanie">
+     <property name="title">
+      <string>Tylko dodawanie</string>
+     </property>
+     <addaction name="actionDodawanie_10"/>
+     <addaction name="actionDodawanie_20"/>
+     <addaction name="actionDodawanie_30"/>
+     <addaction name="actionDodawanie_40"/>
+     <addaction name="actionDodawanie_50"/>
+     <addaction name="separator"/>
+     <addaction name="actionDodawanie_100"/>
+     <addaction name="separator"/>
+     <addaction name="actionDodawanie_zakres"/>
+     <addaction name="separator"/>
+     <addaction name="actionDodawanie_popraw"/>
+    </widget>
+    <widget class="QMenu" name="menuTylko_odejmowanie">
+     <property name="title">
+      <string>Tylko odejmowanie</string>
+     </property>
+     <addaction name="actionOdejmowanie_10"/>
+     <addaction name="actionOdejmowanie_20"/>
+     <addaction name="actionOdejmowanie_30"/>
+     <addaction name="actionOdejmowanie_40"/>
+     <addaction name="actionOdejmowanie_50"/>
+     <addaction name="separator"/>
+     <addaction name="actionOdejmowanie_100"/>
+     <addaction name="separator"/>
+     <addaction name="actionOdejmowanie_zakres"/>
+     <addaction name="separator"/>
+     <addaction name="actionOdejmowanie_popraw"/>
+    </widget>
+    <widget class="QMenu" name="menuDod_Od">
+     <property name="title">
+      <string>Dodawanie i odejmowanie</string>
+     </property>
+     <addaction name="actionDod_Od_10"/>
+     <addaction name="actionDod_Od_20"/>
+     <addaction name="actionDod_Od_30"/>
+     <addaction name="actionDod_Od_40"/>
+     <addaction name="actionDod_Od_50"/>
+     <addaction name="separator"/>
+     <addaction name="actionDod_Od_100"/>
+     <addaction name="separator"/>
+     <addaction name="actionDod_Od_zakres"/>
+    </widget>
+    <widget class="QMenu" name="menuTylko_mnozenie">
+     <property name="title">
+      <string>Tylko mnożenie</string>
+     </property>
+     <addaction name="actionMnozenie_20"/>
+     <addaction name="actionMnozenie_30"/>
+     <addaction name="actionMnozenie_40"/>
+     <addaction name="actionMnozenie_50"/>
+     <addaction name="separator"/>
+     <addaction name="actionMnozenie_100"/>
+     <addaction name="separator"/>
+     <addaction name="actionMnozenie_przez_n"/>
+     <addaction name="separator"/>
+     <addaction name="actionMnozenie_zakres"/>
+     <addaction name="separator"/>
+     <addaction name="actionMnozenie_popraw"/>
+    </widget>
+    <addaction name="menuTylko_dodawanie"/>
+    <addaction name="menuTylko_odejmowanie"/>
+    <addaction name="menuTylko_mnozenie"/>
+    <addaction name="separator"/>
+    <addaction name="menuDod_Od"/>
+    <addaction name="separator"/>
+    <addaction name="actionKonfiguruj_gre"/>
+    <addaction name="separator"/>
+    <addaction name="actionKoniec"/>
+   </widget>
+   <widget class="QMenu" name="menuKonfiguracja">
+    <property name="title">
+     <string>Opcje</string>
+    </property>
+    <addaction name="actionDomyslna_konfiguracja_gier"/>
+    <addaction name="separator"/>
+    <addaction name="actionDzwiek_wlaczony"/>
+   </widget>
+   <widget class="QMenu" name="menuProfil">
+    <property name="title">
+     <string>Profil</string>
+    </property>
+    <addaction name="actionWybierz_gracza"/>
+    <addaction name="separator"/>
+    <addaction name="actionNowy_gracz"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuProfil"/>
+   <addaction name="menuGra"/>
+   <addaction name="menuKonfiguracja"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionKonfiguruj_gre">
+   <property name="text">
+    <string>Konfiguruj grę...</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_10">
+   <property name="text">
+    <string>do 10</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_20">
+   <property name="text">
+    <string>do 20</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_30">
+   <property name="text">
+    <string>do 30</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_40">
+   <property name="text">
+    <string>do 40</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_50">
+   <property name="text">
+    <string>do 50</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_zakres">
+   <property name="text">
+    <string>w wybranym zakresie...</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_10">
+   <property name="text">
+    <string>do 10</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_20">
+   <property name="text">
+    <string>do 20</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_30">
+   <property name="text">
+    <string>do 30</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_40">
+   <property name="text">
+    <string>do 40</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_50">
+   <property name="text">
+    <string>do 50</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_zakres">
+   <property name="text">
+    <string>w wybranym zakresie...</string>
+   </property>
+  </action>
+  <action name="actionDod_Od_10">
+   <property name="text">
+    <string>do 10</string>
+   </property>
+  </action>
+  <action name="actionDod_Od_20">
+   <property name="text">
+    <string>do 20</string>
+   </property>
+  </action>
+  <action name="actionDod_Od_30">
+   <property name="text">
+    <string>do 30</string>
+   </property>
+  </action>
+  <action name="actionDod_Od_40">
+   <property name="text">
+    <string>do 40</string>
+   </property>
+  </action>
+  <action name="actionDod_Od_50">
+   <property name="text">
+    <string>do 50</string>
+   </property>
+  </action>
+  <action name="actionDod_Od_zakres">
+   <property name="text">
+    <string>w wybranym zakresie...</string>
+   </property>
+  </action>
+  <action name="actionKoniec">
+   <property name="text">
+    <string>Koniec</string>
+   </property>
+  </action>
+  <action name="actionDomyslna_konfiguracja_gier">
+   <property name="text">
+    <string>Domyślna konfiguracja gier</string>
+   </property>
+  </action>
+  <action name="actionWybierz_gracza">
+   <property name="text">
+    <string>Wybierz gracza..</string>
+   </property>
+  </action>
+  <action name="actionNowy_gracz">
+   <property name="text">
+    <string>Nowy gracz...</string>
+   </property>
+  </action>
+  <action name="actionDzwiek_wlaczony">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../../Priv/MyProjects/LearnMath/resources/sound_high.png</normaloff>../../../../Priv/MyProjects/LearnMath/resources/sound_high.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dźwięk: włączony</string>
+   </property>
+   <property name="statusTip">
+    <string>Włącz lub wyłącz dźwięki podczas gry</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_20">
+   <property name="text">
+    <string>do 20</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_30">
+   <property name="text">
+    <string>do 30</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_40">
+   <property name="text">
+    <string>do 40</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_50">
+   <property name="text">
+    <string>do 50</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_100">
+   <property name="text">
+    <string>do 100</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_zakres">
+   <property name="text">
+    <string>w wybranym zakresie...</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_100">
+   <property name="text">
+    <string>do 100</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_100">
+   <property name="text">
+    <string>do 100</string>
+   </property>
+  </action>
+  <action name="actionDod_Od_100">
+   <property name="text">
+    <string>do 100</string>
+   </property>
+  </action>
+  <action name="actionDodawanie_popraw">
+   <property name="text">
+    <string>popraw błędy...</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_popraw">
+   <property name="text">
+    <string>popraw błędy...</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_popraw">
+   <property name="text">
+    <string>popraw blędy...</string>
+   </property>
+  </action>
+  <action name="actionMnozenie_przez_n">
+   <property name="text">
+    <string>przez wybraną liczbę...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

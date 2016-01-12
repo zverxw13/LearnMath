@@ -1,0 +1,1 @@
+c:\Python34\Lib\site-packages\PyQt5\pyuic5 -o settings_dialog_ui.py settings_dialog.ui

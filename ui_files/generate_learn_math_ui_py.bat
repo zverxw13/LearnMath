@@ -1,0 +1,1 @@
+c:\Python34\Lib\site-packages\PyQt5\pyuic5 -o learn_math_ui.py mainwindowmatematykana5.ui
