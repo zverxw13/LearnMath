@@ -932,7 +932,7 @@ class LearnMathGui(QMainWindow):
         if self.game_sound_on:  # the game sounds are on
             f_name = self.get_random_yes_no_sound(correct)
             f_length = max(int(LM_Utils.get_wave_length(f_name) * 1000), self.game_delay)
-            print("playing sound")
+            #print("playing sound")
             self.logger.debug("playing sound")
             QtMultimedia.QSound.play(f_name)
 
