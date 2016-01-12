@@ -85,9 +85,11 @@ class ConfigSubtraction(ConfigEquation):
         self.result_condition = result_condition
         self.result_value = result_value
 
+
 class ConfigMultiply(ConfigEquation):
-    def __init__(self, range_dict, without_zero=True, without_one = False, element_1_condition=">=", element_1_value=0,
-                 element_2_condition=">=", element_2_value=1, result_condition=None, result_value=None, custom_rules=None):
+    def __init__(self, range_dict, without_zero=True, without_one=False, element_1_condition=">=", element_1_value=0,
+                 element_2_condition=">=", element_2_value=1, result_condition=None, result_value=None,
+                 custom_rules=None):
         """
 
         :param range_dict: zakres (dictioniary = {"from":x, "to":y}, x,y - integers)
@@ -109,7 +111,6 @@ class ConfigMultiply(ConfigEquation):
         self.element_2_value = element_2_value
         self.result_condition = result_condition
         self.result_value = result_value
-
 
 
 class Answers(object):
@@ -170,12 +171,11 @@ class Equation(object):
             exp = ""
             for i in range(eq.number_1):
                 exp = exp + str(eq.number_2) + " + "
-            exp_ok = exp[:len(exp)-3]
+            exp_ok = exp[:len(exp) - 3]
             hint_exp = exp_ok + " = "
             hint = hint_const + hint_exp
 
         return hint
-
 
     @staticmethod
     def get_hint_for_subtraction(eq):
@@ -196,7 +196,7 @@ class Equation(object):
         n2_ile10 = int(eq.number_2 / 10)
         n2_ile1 = eq.number_2 - (n2_ile10 * 10)
 
-        if n1_ile1 - n2_ile1 < 0 :
+        if n1_ile1 - n2_ile1 < 0:
             # jest pożyczka z dziesiątek
             n1_ile10_po_pozyczce = n1_ile10 - 1
             if n1_ile10_po_pozyczce == 0:
@@ -209,18 +209,11 @@ class Equation(object):
                 return hint
             else:  # 44 - 8,  44 - 18, 91 - 82, ...
                 # coś bardziej skomplikowanego
-                # ToDo: sprawdzić jak to trzeba rozpisać!
                 # 67 - 39 = 67 - 7 - 32 = 60 - 32 =
                 hint_exp = ""
                 hint_exp = hint_exp + str(eq.number_1) + " - " + str(n1_ile1) + " - " + str(eq.number_2 - n1_ile1) + \
                            " = "
                 hint = hint_const + hint_exp
-                # if eq.number_2 <= 9:
-                #     hint_exp = ""
-                #     hint_exp = hint_exp + str(n1_ile10_po_pozyczce * 10) + " + " if n1_ile10_po_pozyczce > 0 else \
-                #         hint_exp
-                #     hint_exp = hint_exp + str(10 + n1_ile1) + " - " if n1_ile1 >= 0 else hint_exp
-                #     hint_exp = hint_exp + str(n2_ile1)
                 return hint
         else:
             # nie ma pożyczki z dziesiątek
@@ -255,8 +248,8 @@ class Equation(object):
         n2_ile10 = int(eq.number_2 / 10)
         n2_ile1 = eq.number_2 - (n2_ile10 * 10)
 
-        if n1_ile1 + n2_ile1 <= 9 :
-            #print("przy dodawaniu liczb nie ma przeniesienia na dziesiątki")
+        if n1_ile1 + n2_ile1 <= 9:
+            # print("przy dodawaniu liczb nie ma przeniesienia na dziesiątki")
             # przy dodawaniu liczb nie ma przeniesienia na dziesiątki
             # np.: 13 + 13, 11 + 18, 34 + 25, 66 + 11, itp.
             # hint_exp = dziesiatki_n1 + dziesiatki_n2 + jednosci_n1 + jednosci_n2 + " = "
@@ -266,13 +259,13 @@ class Equation(object):
             hint_exp = hint_exp + str(n1_ile1) + " + " + str(n2_ile1) + " = "
             hint = hint_const + hint_exp
         else:
-            #print("przy dodawaniu liczb jest przeniesienie na dziesiątki")
+            # print("przy dodawaniu liczb jest przeniesienie na dziesiątki")
             # przy dodawaniu liczb jest przeniesienie na dziesiątki
             # np.: 13 + 18, 34 + 29, itp.
             n1_ile_do_10 = 10 - n1_ile1
             n2_reszta_1 = n2_ile1 - n1_ile_do_10
             # hint_exp = dziesiatki_n1 + dziesiatki_n2 + jednosci_n1 + n1_ile_do_10 + n2_reszta_1 + " = "
-            if n1_ile10 > 0: #spr dla 7 + 13
+            if n1_ile10 > 0:  # spr dla 7 + 13
                 hint_exp = ""
                 hint_exp = hint_exp + str(n1_ile10 * 10) + " + " if n1_ile10 > 0 else hint_exp
                 hint_exp = hint_exp + str(n1_ile1) + " + " if n1_ile1 > 0 else hint_exp
@@ -280,20 +273,20 @@ class Equation(object):
                 hint_exp = hint_exp + str(n2_ile10 * 10) + " + " if n2_ile10 > 0 else hint_exp
                 hint_exp = hint_exp + str(n2_reszta_1) + " = " if n2_reszta_1 > 0 else hint_exp
 
-                if hint_exp[len(hint_exp)-2] == "+":
-                    hint_exp = hint_exp[:len(hint_exp)-2] + "= "
-                # hint_exp = str(n1_ile10 * 10) + " + " + str(n2_ile10 * 10) + " + " + \
-                #            str(n1_ile1) + " + " + str(n1_ile_do_10) + " + " + str(n2_reszta_1) + " = "
+                if hint_exp[len(hint_exp) - 2] == "+":
+                    hint_exp = hint_exp[:len(hint_exp) - 2] + "= "
+                    # hint_exp = str(n1_ile10 * 10) + " + " + str(n2_ile10 * 10) + " + " + \
+                    #            str(n1_ile1) + " + " + str(n1_ile_do_10) + " + " + str(n2_reszta_1) + " = "
             else:
                 hint_exp = ""
                 hint_exp = hint_exp + str(n1_ile1) + " + " if n1_ile1 > 0 else hint_exp
                 hint_exp = hint_exp + str(n1_ile_do_10) + " + " if n1_ile_do_10 > 0 else hint_exp
                 hint_exp = hint_exp + str(n2_ile10 * 10) + " + " if n2_ile10 > 0 else hint_exp
                 hint_exp = hint_exp + str(n2_reszta_1) + " = " if n2_reszta_1 > 0 else hint_exp
-                if hint_exp[len(hint_exp)-2] == "+":
-                    hint_exp = hint_exp[:len(hint_exp)-2] + "= "
-                # hint_exp = str(n1_ile1) + " + " + str(n2_ile10 * 10) + " + " + \
-                #            str(n1_ile_do_10) + " + " + str(n2_reszta_1) + " = "
+                if hint_exp[len(hint_exp) - 2] == "+":
+                    hint_exp = hint_exp[:len(hint_exp) - 2] + "= "
+                    # hint_exp = str(n1_ile1) + " + " + str(n2_ile10 * 10) + " + " + \
+                    #            str(n1_ile_do_10) + " + " + str(n2_reszta_1) + " = "
 
             hint = hint_const + hint_exp
 
@@ -364,7 +357,6 @@ class Equation(object):
                 return n1 * n2 >= result_value
         else:
             return False
-
 
     @staticmethod
     def prepareEquationAddition(game_config):
@@ -457,11 +449,11 @@ class Equation(object):
                                                                number_1)
             # print("n2")
             n2 = LM_Utils.random_int_with_additional_condition(number_range_min, number_range_max, number_2_condition,
-                                                            number_2)
+                                                               number_2)
             if (game_config.result_condition is not None) and (game_config.result_value is not None):
                 # gdy podano warunek na wynik
                 if not Equation.is_addition_result_met(n1, n2, game_config.result_condition,
-                                                          game_config.result_value):
+                                                       game_config.result_value):
                     condition_addition_result_met = False
 
             if game_config.without_zero:
@@ -771,7 +763,7 @@ class Equation(object):
             if (game_config.result_condition is not None) and (game_config.result_value is not None):
                 # gdy podano warunek na wynik
                 if not Equation.is_multiply_result_met(n1, n2, game_config.result_condition,
-                                                          game_config.result_value):
+                                                       game_config.result_value):
                     condition_multiply_result_met = False
 
             if game_config.without_zero:
@@ -792,7 +784,6 @@ class Equation(object):
         p_equation = Equation(n1, OPERATION_MULTIPLY, n2)
 
         return p_equation
-
 
     @staticmethod
     def prepareEquationBasingOnSingleOperator(g_config):
@@ -826,7 +817,6 @@ class Equation(object):
             print("prepareEquationDivision() - not handled yet")
 
         return n_equation
-
 
     def checkUserResult(self, userResult):
         """ Check user answer against correct result.

@@ -13,8 +13,6 @@ logger = LM_Utils.createLoggerForScreenAndFile("learn_math_log.txt")
 if __name__ == "__main__":
 
     try:
-        # logger.debug(("ala ", 3))
-        print("eval 2 + 2 = ", eval("2+2"))
         app = QApplication(sys.argv)
         myapp = LearnMathGui()
 

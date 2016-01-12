@@ -61,7 +61,6 @@ class Rule(object):
         operand = None
         value = None
 
-        # ToDo: add parsing logic here!
         print("DEBUG: str_one_rule = " + str_one_rule)
 
         # checking and parsing elements

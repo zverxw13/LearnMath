@@ -1,19 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import sys
-import sched
-import time
-import functools
-import os
-import glob
-
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QWidget, QApplication, QDialog, QTreeWidgetItem, QMainWindow, QLabel, QMessageBox, \
-    QTextEdit
-from PyQt5 import QtMultimedia
+from PyQt5.QtWidgets import QDialog
 
 from ui_files.settings_dialog_ui import Ui_Dialog
-from Game import *
 from LearnMathGui import *
 
 

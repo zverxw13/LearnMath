@@ -1,28 +1,20 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import sched
-import time
-import functools
-import os
 import glob
 
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QWidget, QApplication, QDialog, QTreeWidgetItem, QMainWindow, QLabel, QMessageBox, \
-    QTextEdit, QComboBox, QPushButton, QHBoxLayout, QGridLayout, QDialogButtonBox, QToolTip, QDesktopWidget, \
+from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QMessageBox, \
+    QToolTip, QDesktopWidget, \
     QInputDialog, QLineEdit
 from PyQt5 import QtMultimedia
 
 from ui_files.learn_math_ui import Ui_MainWindowMatematykaNa5
 from DefaultConfigurationDialog import DefaultConfigurationDialog
-
-from Game import *
-from Rule import *
 from LearnMathConfiguration import *
 from Statistic import *
-
 import LM_Utils
 
 
