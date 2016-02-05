@@ -20,7 +20,7 @@ class AddingTest(unittest.TestCase):
         n2 = 13
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "7 + 13 = 7 + 3 + 10 = ")
 
@@ -30,7 +30,7 @@ class AddingTest(unittest.TestCase):
         n2 = 18
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "7 + 18 = 7 + 3 + 10 + 5 = ")
 
@@ -40,7 +40,7 @@ class AddingTest(unittest.TestCase):
         n2 = 7
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "13 + 7 = 10 + 3 + 7 = ")
 
@@ -50,7 +50,7 @@ class AddingTest(unittest.TestCase):
         n2 = 7
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "18 + 7 = 10 + 8 + 2 + 5 = ")
 
@@ -60,7 +60,7 @@ class AddingTest(unittest.TestCase):
         n2 = 3
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "7 + 3 = 7 + 3 = ")
 
@@ -70,7 +70,7 @@ class AddingTest(unittest.TestCase):
         n2 = 13
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "17 + 13 = 10 + 7 + 3 + 10 = ")
 
@@ -80,7 +80,7 @@ class AddingTest(unittest.TestCase):
         n2 = 31
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "27 + 31 = 20 + 30 + 7 + 1 = ")
 
@@ -90,7 +90,7 @@ class AddingTest(unittest.TestCase):
         n2 = 39
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "27 + 39 = 20 + 7 + 3 + 30 + 6 = ")
 
@@ -100,7 +100,7 @@ class AddingTest(unittest.TestCase):
         n2 = 0
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "27 + 0 = 20 + 7 + 0 = ")
 
@@ -110,7 +110,7 @@ class AddingTest(unittest.TestCase):
         n2 = 0
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "3 + 0 = 3 + 0 = ")
 
@@ -120,7 +120,7 @@ class AddingTest(unittest.TestCase):
         n2 = 5
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "0 + 5 = 0 + 5 = ")
 
@@ -130,7 +130,7 @@ class AddingTest(unittest.TestCase):
         n2 = 5
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "5 + 5 = 5 + 5 = ")
 
@@ -140,7 +140,7 @@ class AddingTest(unittest.TestCase):
         n2 = 8
         op = "+"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1+n2), eq.__str__() + " should be " + str(n1+n2))
+        self.assertTrue(eq.check_user_result(n1 + n2), eq.__str__() + " should be " + str(n1 + n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "7 + 8 = 7 + 3 + 5 = ")
 
@@ -153,7 +153,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 9
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "17 - 9 = 17 - 7 - 2 = ")
 
@@ -163,7 +163,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 8
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "12 - 8 = 12 - 2 - 6 = ")
 
@@ -173,7 +173,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 5
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "15 - 5 = ")
 
@@ -183,7 +183,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 7
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "27 - 7 = ")
 
@@ -193,7 +193,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 10
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "17 - 10 = ")
 
@@ -203,7 +203,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 10
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "30 - 10 = ")
 
@@ -213,7 +213,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 3
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "28 - 3 = 20 + 8 - 3 = ")
 
@@ -223,7 +223,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 39
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "67 - 39 = 67 - 7 - 32 = ")
 
@@ -233,7 +233,7 @@ class SubtractingTest(unittest.TestCase):
         n2 = 23
         op = "-"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1-n2), eq.__str__() + " should be " + str(n1-n2))
+        self.assertTrue(eq.check_user_result(n1 - n2), eq.__str__() + " should be " + str(n1 - n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "67 - 23 = 67 - 7 - 16 = ")
 
@@ -246,7 +246,7 @@ class MultiplyingTest(unittest.TestCase):
         n2 = 10
         op = "*"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1*n2), eq.__str__() + " should be " + str(n1*n2))
+        self.assertTrue(eq.check_user_result(n1 * n2), eq.__str__() + " should be " + str(n1 * n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "0 * 10 = ")
 
@@ -256,7 +256,7 @@ class MultiplyingTest(unittest.TestCase):
         n2 = 10
         op = "*"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1*n2), eq.__str__() + " should be " + str(n1*n2))
+        self.assertTrue(eq.check_user_result(n1 * n2), eq.__str__() + " should be " + str(n1 * n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "1 * 10 = ")
 
@@ -266,7 +266,7 @@ class MultiplyingTest(unittest.TestCase):
         n2 = 10
         op = "*"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1*n2), eq.__str__() + " should be " + str(n1*n2))
+        self.assertTrue(eq.check_user_result(n1 * n2), eq.__str__() + " should be " + str(n1 * n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "3 * 10 = 10 + 10 + 10 = ")
 
@@ -276,7 +276,7 @@ class MultiplyingTest(unittest.TestCase):
         n2 = 7
         op = "*"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1*n2), eq.__str__() + " should be " + str(n1*n2))
+        self.assertTrue(eq.check_user_result(n1 * n2), eq.__str__() + " should be " + str(n1 * n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "3 * 7 = 7 + 7 + 7 = ")
 
@@ -286,6 +286,6 @@ class MultiplyingTest(unittest.TestCase):
         n2 = 6
         op = "*"
         eq = Equation(n1, op, n2)
-        self.assertTrue(eq.checkUserResult(n1*n2), eq.__str__() + " should be " + str(n1*n2))
+        self.assertTrue(eq.check_user_result(n1 * n2), eq.__str__() + " should be " + str(n1 * n2))
         print(">>> " + eq.get_hint_for_equation(eq))
         self.assertEqual(eq.get_hint_for_equation(eq), "8 * 6 = 6 + 6 + 6 + 6 + 6 + 6 + 6 + 6 = ")

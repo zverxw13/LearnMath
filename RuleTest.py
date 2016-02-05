@@ -107,7 +107,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_01m(self):
         txt_rule = "L1>0\n" \
@@ -120,7 +120,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_02(self):
         txt_rule = "L1>0\n" \
@@ -132,7 +132,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_02m(self):
         txt_rule = "L1>0\n" \
@@ -145,7 +145,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_03(self):
         txt_rule = "L1>0\n" \
@@ -155,7 +155,7 @@ class ValidateRules_W(unittest.TestCase):
                    "W==90".splitlines()
         rules = Rule.parse(txt_rule)
 
-        Equation.validate_rules_for_W(rules)
+        Equation.validate_rules_for_w(rules)
 
     def test_W_03m(self):
         txt_rule = "L1>0\n" \
@@ -168,7 +168,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_04(self):
         txt_rule = "L1>0\n" \
@@ -181,7 +181,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_05(self):
         txt_rule = "L1>0\n" \
@@ -194,7 +194,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_05b(self):
         txt_rule = "L1>0\n" \
@@ -207,7 +207,7 @@ class ValidateRules_W(unittest.TestCase):
 
         exceptions = (RuleException)
         with self.assertRaises(exceptions):
-            Equation.validate_rules_for_W(rules)
+            Equation.validate_rules_for_w(rules)
 
     def test_W_06(self):
         txt_rule = "L1>0\n" \
@@ -218,4 +218,4 @@ class ValidateRules_W(unittest.TestCase):
                    "W<90".splitlines()
         rules = Rule.parse(txt_rule)
 
-        Equation.validate_rules_for_W(rules)
+        Equation.validate_rules_for_w(rules)
